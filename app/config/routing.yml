@@ -5,4 +5,8 @@
 
 _welcome:
     pattern:  /
-    defaults: { _controller: AcmeDemoBundle:Welcome:index }
+    defaults: { _controller: PortalBundle:Welcome:index }
+
+#_login:
+#    resource: "@SecurityBundle/Controller/AuthenticationController.php"
+#    type:     annotation
