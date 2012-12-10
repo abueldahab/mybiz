@@ -1,0 +1,5 @@
+login.title: Authenticate
+login.username: Username
+login.password: Password
+login.submit: Login
+login.cancel: Cancel

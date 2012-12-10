@@ -13,4 +13,5 @@ parameters:
     secret: f51e391b70109a39914f95631448a36fa
     database_path: null
     application_name: MyBiz
-    customer_name: customer_name
+    customer_name: testklant
+    jquery_mobile_theme: c

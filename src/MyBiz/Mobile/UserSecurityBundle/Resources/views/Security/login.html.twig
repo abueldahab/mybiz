@@ -1,0 +1,24 @@
+{% extends '::base.mobile.html.twig' %}
+
+{% block header %}
+    <h1>{{ customer_name }} - Authentication</h1>
+{% endblock %}
+
+{% block content %}
+    {% if error %}
+        <div>{{ error.message }}</div>
+    {% endif %}
+
+    <div data-role="content">
+        <form action="{{ path('_login_check') }}" method="post">
+            <label for="username">{% trans %}login.username{% endtrans %}</label>
+            <input type="text" name="_username" id="username" />
+            <label for="password">{% trans %}login.password{% endtrans %}</label>
+            <input type="password" name="_password" id="password" />
+            <a href="{{ path('_welcome') }}" data-role="button" data-inline="true" data-icon="delete" data-transition="flip">{% trans %}login.cancel{% endtrans %}</a>
+            <input type="submit" value="{% trans %}login.submit{% endtrans %}" data-inline="true" data-icon="check" />
+        </form>
+    </div><!-- /content -->
+
+{% endblock %}
+

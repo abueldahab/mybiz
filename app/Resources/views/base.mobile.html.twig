@@ -7,11 +7,13 @@
         <script src="{{ asset('html/mobile/jquery.mobile-1.2.0.min.js') }}"></script>
     </head>
     <body>
-        <div data-role="page" data-theme="c">
+        <div data-role="page" data-theme="c{{ jquery_mobile_theme }}">
 
-            <div data-role="header" data-theme="c">
-                <h1>{{ customer_name }}</h1>
-                <a href="/login" data-rel="dialog" class="ui-btn-right">{% trans %}user.login{% endtrans %}</a>
+            <div data-role="header" data-theme="{{ jquery_mobile_theme }}">
+                {% block header %}
+                    <h1>{{ customer_name }}</h1>
+                    <a href="{{ path('_login') }}" data-transition="flip" class="ui-btn-right">{% trans %}user.login{% endtrans %}</a>
+                {% endblock %}
             </div><!-- /header -->
 
             <div data-role="content">

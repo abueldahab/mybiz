@@ -22,15 +22,27 @@ security:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        login:
-            pattern:  ^/secured/login$
-            security: false
+        login_firewall:
+                pattern:    ^/secured/login$
+                anonymous:  ~
 
         secured_area:
             pattern:    ^/secured/
             form_login:
-                check_path: /secured/login_check
-                login_path: /secured/login
+                login_path:                     /secured/login
+                use_forward:                    false
+                check_path:                     /secured/login_check
+                post_only:                      true
+                always_use_default_target_path: false
+                default_target_path:            /secured/
+                target_path_parameter:          _target_path
+                use_referer:                    false
+                failure_path:                   null
+                failure_forward:                false
+                username_parameter:             _username
+                password_parameter:             _password
+                csrf_parameter:                 _csrf_token
+                intention:                      authenticate
             logout:
                 path:   /secured/logout
                 target: /
@@ -39,5 +51,5 @@ security:
             #    realm: "Secured Demo Area"
 
     access_control:
-        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        - { path: ^/secured/login, roles: IS_AUTHENTICATED_ANONYMOUSLY}
         #- { path: ^/_internal/secure, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 127.0.0.1 }

@@ -7,6 +7,9 @@ _welcome:
     pattern:  /
     defaults: { _controller: PortalBundle:Welcome:index }
 
-#_login:
-#    resource: "@SecurityBundle/Controller/AuthenticationController.php"
-#    type:     annotation
+_login:
+    pattern:   /secured/login
+    defaults:  { _controller: UserSecurityBundle:Security:login }
+
+_login_check:
+    pattern:   /secured/login_check

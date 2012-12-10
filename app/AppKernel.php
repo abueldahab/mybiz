@@ -24,7 +24,7 @@ class AppKernel extends Kernel
 
         // MyBiz bundles
         $bundles[] = new MyBiz\Mobile\PortalBundle\PortalBundle();
-        $bundles[] = new MyBiz\Mobile\LoginBundle\LoginBundle();
+        $bundles[] = new MyBiz\Mobile\UserSecurityBundle\UserSecurityBundle();
 
         // Dev, test bundles
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
