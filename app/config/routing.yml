@@ -3,13 +3,21 @@
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #    prefix:   /_internal
 
-_welcome:
+_portal:
     pattern:  /
-    defaults: { _controller: PortalBundle:Welcome:index }
+    defaults: { _controller: PortalBundle:Portal:index }
 
 _login:
-    pattern:   /secured/login
-    defaults:  { _controller: UserSecurityBundle:Security:login }
+    resource: "@UserSecurityBundle/Controller/SecurityController.php"
+    type:     annotation
+    prefix:   /secured
 
-_login_check:
-    pattern:   /secured/login_check
+_admin:
+    resource: "@AdminBundle/Controller/IndexController.php"
+    type:     annotation
+    prefix:   /secured/admin
+
+_prospects:
+    resource: "@AdminBundle/Controller/Contacts/ProspectController.php"
+    type:     annotation
+    prefix:   /secured/admin/contacts/prospects

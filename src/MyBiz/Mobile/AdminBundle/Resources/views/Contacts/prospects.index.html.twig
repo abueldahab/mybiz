@@ -1,0 +1,30 @@
+{% extends 'AdminBundle:Contacts:contacts.base.html.twig' %}
+
+{% block title %}{% trans %}contacts.type.prospect.title{% endtrans %}{% endblock %}
+
+{% block header_right %}
+    <a href="{{ path('_prospects_goto_add') }}" class="ui-btn-right" data-icon="plus">{% trans %}header.right.nav.prospects.add{% endtrans %}</a>
+{% endblock %}
+
+{% block content %}
+
+    <ul data-role="listview" data-autodividers data-filter="true" data-filter-placeholder="{% trans %}contacts.search.placeholder{% endtrans %}" data-theme="c" data-divider-them="a">
+        <li>
+            <a href="b-day.html" data-transition="slide">
+                A prospect
+            </a>
+        </li>
+        <li>
+            <a href="b-day.html" data-transition="slide">
+                B prospect
+            </a>
+        </li>
+        <li>
+            <a href="b-day.html" data-transition="slide">
+                C prospect
+            </a>
+        </li>
+    </ul>
+
+
+{% endblock %}

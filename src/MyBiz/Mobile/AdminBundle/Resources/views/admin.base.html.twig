@@ -1,0 +1,25 @@
+{% extends ':Mobile:mobile.base.html.twig' %}
+
+{% block header %}
+    {% block header_left %}
+    {% endblock %}
+    <h1>{% block title %}{% trans %}admin.title{% endtrans %}{% endblock %}</h1>
+    {% block header_right %}
+    {% endblock %}
+    {% block nav_bar %}
+        <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>{% block nav_contacts %}<a href="{{ path('_contacts_index') }}" data-icon="grid">{% trans %}admin.navbar.contacts{% endtrans %}</a>{% endblock %}</li>
+                <li>{% block nav_erp %}<a href="#" data-icon="star">{% trans %}admin.navbar.erp{% endtrans %}</a>{% endblock %}</li>
+                <li>{% block nav_setup %}<a href="#" data-icon="gear">{% trans %}admin.navbar.setup{% endtrans %}</a>{% endblock %}</li>
+            </ul>
+        </div><!-- /navbar -->
+    {% endblock %}
+{% endblock %}
+
+{% block footer_right %}
+    <a href="#popupAccount" data-rel="popup" class="ui-btn-right" data-icon="star">{{ app.user.username }}</a>
+    <div data-role="popup" id="popupAccount">
+        {% include 'AdminBundle:Account:account.menu.html.twig' %}
+    </div>
+{% endblock %}

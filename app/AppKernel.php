@@ -7,7 +7,7 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
-        // Third party bundles
+        // Core bundles
         $bundles = array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
@@ -22,9 +22,14 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
         );
 
-        // MyBiz bundles
+        // MyBiz Engine bundles
+        $bundles[] = new MyBiz\Engine\CommonBundle\CommonBundle();
+        $bundles[] = new MyBiz\Engine\ContactBundle\ContactBundle();
+
+        // MyBiz Mobile bundles
         $bundles[] = new MyBiz\Mobile\PortalBundle\PortalBundle();
         $bundles[] = new MyBiz\Mobile\UserSecurityBundle\UserSecurityBundle();
+        $bundles[] = new MyBiz\Mobile\AdminBundle\AdminBundle();
 
         // Dev, test bundles
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -1,0 +1,46 @@
+{% extends 'AdminBundle::admin.base.html.twig' %}
+
+{% block header_left %}
+    <a href="{{ path('_admin_index') }}" class="ui-btn-left" data-icon="home" data-iconpos="notext" data-mini="true">{% trans %}header.left.nav.home{% endtrans %}</a>
+{% endblock %}
+
+{% block nav_contacts %}<a href="{{ path('_contacts_index') }}" data-icon="grid" class="ui-btn-active">{% trans %}admin.navbar.contacts{% endtrans %}</a>{% endblock %}
+
+{% block content %}
+    <ul data-role="listview" data-inset="true" data-theme="c" data-count-theme="c">
+        <li class"ui-btn">
+            <a href="{{ path('_prospects_index') }}" data-transition="slide">{% trans %}contacts.type.prospect.title{% endtrans %}
+                <span class="ui-li-count">999999</span>
+            </a>
+        </li>
+        <li class"ui-btn">
+            <a href="#" data-transition="slide">{% trans %}contacts.type.customer.title{% endtrans %}
+                <span class="ui-li-count">999999</span>
+            </a>
+        </li>
+        <li class"ui-btn">
+            <a href="#" data-transition="slide">{% trans %}contacts.type.representative.title{% endtrans %}
+                <span class="ui-li-count">999999</span>
+            </a>
+        </li>
+        <li class"ui-btn">
+            <a href="#" data-transition="slide">{% trans %}contacts.type.thirdparty.title{% endtrans %}
+                <span class="ui-li-count">999999</span>
+            </a>
+        </li>
+    </ul>
+    <ul data-role="listview" data-inset="true" data-theme="c" data-count-theme="c">
+        <li class"ui-btn">
+            <a href="#" data-transition="slide">{% trans %}contacts.type.supplier.title{% endtrans %}
+                <span class="ui-li-count">999999</span>
+            </a>
+        </li>
+        <li class"ui-btn">
+            <a href="#" data-transition="slide">{% trans %}contacts.type.staff.title{% endtrans %}
+                <span class="ui-li-count">999999</span>
+            </a>
+        </li>
+    </ul>
+{% endblock %}
+
+

@@ -25,6 +25,7 @@ twig:
       application_name: "%application_name%"
       customer_name:    "%customer_name%"
       jquery_mobile_theme: "%jquery_mobile_theme%"
+      jquery_mobile_content_theme: "%jquery_mobile_content_theme%"
 
 # Assetic Configuration
 assetic:

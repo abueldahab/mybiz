@@ -1,0 +1,7 @@
+<div data-role="controlgroup" data-theme="{{ jquery_mobile_theme }}">
+    <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="{{ jquery_mobile_theme }}">
+        <li><a href="http://www.google.be" target="_blank">{% trans %}nav.menu.website{% endtrans %}</a></li>
+        <li><a href="http://www.google.be" data-transition="flip">{% trans %}nav.menu.shop{% endtrans %}</a></li>
+        <li><a href="{{ path('_login') }}" data-transition="flip">{% trans %}nav.menu.admin{% endtrans %}</a></li>
+    </ul>
+</div>

@@ -3,8 +3,8 @@ parameters:
     database_host: 127.0.0.1
     database_port: null
     database_name: mybiz
-    database_user: root
-    database_password: null
+    database_user: mybiz_dba
+    database_password: pw4dba
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     mailer_user: null
@@ -14,4 +14,5 @@ parameters:
     database_path: null
     application_name: MyBiz
     customer_name: testklant
-    jquery_mobile_theme: c
+    jquery_mobile_theme: b
+    jquery_mobile_content_theme: b

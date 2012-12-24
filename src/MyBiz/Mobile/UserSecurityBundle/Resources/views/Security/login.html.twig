@@ -1,7 +1,8 @@
-{% extends '::base.mobile.html.twig' %}
+{% extends ':Mobile:mobile.base.html.twig' %}
 
 {% block header %}
     <h1>{{ customer_name }} - Authentication</h1>
+    <a href="{{ path('_portal') }}" class="ui-btn-left" data-icon="delete" data-transition="flip">{% trans %}login.cancel{% endtrans %}</a>
 {% endblock %}
 
 {% block content %}
@@ -15,8 +16,7 @@
             <input type="text" name="_username" id="username" />
             <label for="password">{% trans %}login.password{% endtrans %}</label>
             <input type="password" name="_password" id="password" />
-            <a href="{{ path('_welcome') }}" data-role="button" data-inline="true" data-icon="delete" data-transition="flip">{% trans %}login.cancel{% endtrans %}</a>
-            <input type="submit" value="{% trans %}login.submit{% endtrans %}" data-inline="true" data-icon="check" />
+            <input type="submit" value="{% trans %}login.submit{% endtrans %}" data-icon="check" data-transition="fade"/>
         </form>
     </div><!-- /content -->
 

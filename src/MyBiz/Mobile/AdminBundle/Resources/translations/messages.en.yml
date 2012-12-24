@@ -1,0 +1,23 @@
+user.account: Account
+user.logout: Logout
+admin.title: Administration
+admin.navbar.contacts: Contacts
+admin.navbar.erp: ERP
+admin.navbar.setup: Setup
+header.left.nav.home: Start
+header.left.nav.contacts: All contacts
+header.left.nav.prospects: All prospects
+header.right.nav.prospects.add: Add prospect
+contacts.type.thirdparty.title: Third party
+contacts.type.prospect.title: Prospects
+contacts.type.customer.title: Customers
+contacts.type.representative.title: Representatives
+contacts.type.supplier.title: Suppliers
+contacts.type.staff.title: Staff
+contacts.search.placeholder: Search...
+contacts.add.title: New prospect
+contacts.add.cancel.label: Cancel
+contacts.add.form.title.label: Title
+contacts.add.form.name.label: Name
+contacts.add.form.firstname.label: First name
+
