@@ -1,0 +1,10 @@
+{% extends ':Mobile:mobile.base.html.twig' %}
+
+{% block header %}
+    {% block header_left %}
+    {% endblock %}
+    <h1>{% block title %}{% trans %}admin.setup.title{% endtrans %}{% endblock %}</h1>
+    {% block header_right %}
+    {% endblock %}
+{% endblock %}
+

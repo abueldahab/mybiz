@@ -9,17 +9,21 @@
     {% block nav_bar %}
         <div data-role="navbar" data-iconpos="left">
             <ul>
-                <li>{% block nav_contacts %}<a href="{{ path('_contacts_index') }}" data-icon="grid">{% trans %}admin.navbar.contacts{% endtrans %}</a>{% endblock %}</li>
-                <li>{% block nav_erp %}<a href="#" data-icon="star">{% trans %}admin.navbar.erp{% endtrans %}</a>{% endblock %}</li>
-                <li>{% block nav_setup %}<a href="#" data-icon="gear">{% trans %}admin.navbar.setup{% endtrans %}</a>{% endblock %}</li>
+                <li>{% block nav_header_one %}<a href="{{ path('_contacts_index') }}" data-icon="grid">{% trans %}admin.navbar.contacts{% endtrans %}</a>{% endblock %}</li>
+                <li>{% block nav_header_two %}<a href="#" data-icon="star">{% trans %}admin.navbar.erp{% endtrans %}</a>{% endblock %}</li>
+                <li>{% block nav_header_three %}<a href="#" data-icon="gear">...</a>{% endblock %}</li>
             </ul>
         </div><!-- /navbar -->
     {% endblock %}
 {% endblock %}
 
-{% block footer_right %}
-    <a href="#popupAccount" data-rel="popup" class="ui-btn-right" data-icon="star">{{ app.user.username }}</a>
+{% block footer_left %}
+    <a href="#popupAccount" data-rel="popup" class="ui-btn-left" data-icon="user">{{ app.user.username }}</a>
     <div data-role="popup" id="popupAccount">
         {% include 'AdminBundle:Account:account.menu.html.twig' %}
     </div>
+{% endblock %}
+
+{% block footer_right %}
+    <a href="{{ path('_setup_index') }}" data-role="button" class="ui-btn-right" data-icon="gear">{% trans %}admin.setup.label{% endtrans %}</a>
 {% endblock %}

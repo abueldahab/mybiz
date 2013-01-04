@@ -18,7 +18,7 @@ abstract class AbstractEntity
     /**
      * @ORM\Column(type="datetime")
      */
-    private $createdDateTime;
+    private $createdDatetime;
 
     /**
      * @ORM\Column(type="string")
@@ -28,10 +28,10 @@ abstract class AbstractEntity
     /**
      * @ORM\Column(type="datetime")
      */
-    private $lastModifiedDateTime;
+    private $lastModifiedDatetime;
 
     /**
      * @ORM\Column(type="string")
      */
-    private $lastModifiedUser;
+    private $lastModifiedByUser;
 }

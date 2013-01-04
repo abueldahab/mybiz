@@ -17,6 +17,11 @@ _admin:
     type:     annotation
     prefix:   /secured/admin
 
+_setup:
+    resource: "@AdminBundle/Controller/Setup/SetupController.php"
+    type:     annotation
+    prefix:   /secured/admin/setup
+
 _prospects:
     resource: "@AdminBundle/Controller/Contacts/ProspectController.php"
     type:     annotation

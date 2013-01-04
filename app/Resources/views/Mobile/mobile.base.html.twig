@@ -2,7 +2,10 @@
 <html>
     <head>
         <title>{{ application_name }} - {{ customer_name }}</title>
+        {# JQuery mobile standard css #}
         <link rel="stylesheet" href="{{ asset('html/mobile/jquery.mobile-1.2.0.min.css') }}" />
+        {# JQuery mobile extended css #}
+        {#<link rel="stylesheet" href="{{ asset('html/mobile/extended/jqm-icon-pack-2.1.2-fa.css') }}" />#}
         <script src="{{ asset('html/mobile/jquery-1.8.2.min.js') }}"></script>
         <script src="{{ asset('html/mobile/jquery.mobile-1.2.0.min.js') }}"></script>
     </head>
@@ -24,7 +27,9 @@
             </div><!-- /content -->
 
             <div data-role="footer" data-position="fixed" data-theme="{{ jquery_mobile_theme }}">
-                <h4 style="text-align:left;">{{ customer_name }}</h4>
+                {% block footer_left %}
+                {% endblock %}
+                <h4 style="text-align:center;">&copy; {{ "now"|date("Y") }} {{ application_name }} - {{ customer_name }}</h4>
                 {% block footer_right %}
                 {% endblock %}
             </div><!-- /footer -->
