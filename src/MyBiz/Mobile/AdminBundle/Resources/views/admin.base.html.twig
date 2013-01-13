@@ -19,9 +19,7 @@
 
 {% block footer_left %}
     <a href="#popupAccount" data-rel="popup" class="ui-btn-left" data-icon="user">{{ app.user.username }}</a>
-    <div data-role="popup" id="popupAccount">
-        {% include 'AdminBundle:Account:account.menu.html.twig' %}
-    </div>
+    {% include 'AdminBundle:Account:account.menu.html.twig' %}
 {% endblock %}
 
 {% block footer_right %}

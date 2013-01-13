@@ -1,24 +1,27 @@
 {% extends ':Mobile:mobile.base.html.twig' %}
 
 {% block header %}
-    <h1>{{ customer_name }} - Authentication</h1>
+    <h1>{% trans %}login.title{% endtrans %}</h1>
     <a href="{{ path('_portal') }}" class="ui-btn-left" data-icon="delete" data-transition="flip">{% trans %}login.cancel{% endtrans %}</a>
 {% endblock %}
 
 {% block content %}
-    {% if error %}
-        <div>{{ error.message }}</div>
-    {% endif %}
+        <form id="loginForm" action="{{ path('_login_check') }}" method="post">
 
-    <div data-role="content">
-        <form action="{{ path('_login_check') }}" method="post">
-            <label for="username">{% trans %}login.username{% endtrans %}</label>
-            <input type="text" name="_username" id="username" />
-            <label for="password">{% trans %}login.password{% endtrans %}</label>
-            <input type="password" name="_password" id="password" />
-            <input type="submit" value="{% trans %}login.submit{% endtrans %}" data-icon="check" data-transition="fade"/>
+            {% if error %}
+                <div id="error">{{ error.message }}</div>
+            {% endif %}
+
+            <div data-role="fieldcontain" class="ui-field-contain">
+                <label for="username">{% trans %}login.username{% endtrans %}</label>
+                <input type="text" name="_username" id="username" maxlength="25"/>
+            </div>
+            <div data-role="fieldcontain" class="ui-field-contain">
+                <label for="password">{% trans %}login.password{% endtrans %}</label>
+                <input type="password" name="_password" id="password" maxlength="40"/>
+            </div>
+            <button type="submit" aria-disabled="false">{% trans %}login.submit{% endtrans %}</button>
         </form>
-    </div><!-- /content -->
-
 {% endblock %}
+
 

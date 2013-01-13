@@ -1,6 +1,6 @@
 <?php
 
-namespace MyBiz\Engine\Contact\Entity;
+namespace MyBiz\Engine\ContactBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
