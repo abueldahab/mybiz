@@ -1,7 +1,7 @@
 {% extends 'AdminBundle:Setup:setup.base.html.twig' %}
 
 {% block header_left %}
-    <a href="{{ path('_admin_index') }}" data-role="button" data-icon="home" data-iconpos="notext" data-mini="true" data-iconshadow="true" class="ui-btn-left" >{% trans %}header.left.nav.home{% endtrans %}</a>
+    <a href="{{ path('_admin_index') }}" data-role="button" data-icon="home" data-iconpos="notext" data-mini="{{ jquery_mobile_theme_mini }}" data-iconshadow="true" class="ui-btn-left" >{% trans %}header.left.nav.home{% endtrans %}</a>
 {% endblock %}
 
 {% block content %}

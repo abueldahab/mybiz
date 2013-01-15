@@ -33,7 +33,7 @@ security:
                 use_forward:                    false
                 check_path:                     /secured/login_check
                 post_only:                      true
-                always_use_default_target_path: true
+                always_use_default_target_path: false
                 default_target_path:            /secured/admin/index
                 target_path_parameter:          _target_path
                 use_referer:                    false
@@ -46,7 +46,7 @@ security:
             logout:
                 path:   /secured/logout
                 target: /
-            #anonymous: ~
+            anonymous: ~
             #http_basic:
             #    realm: "Secured Demo Area"
 

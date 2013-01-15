@@ -25,7 +25,10 @@ twig:
       application_name: "%application_name%"
       customer_name:    "%customer_name%"
       jquery_mobile_theme: "%jquery_mobile_theme%"
+      jquery_mobile_theme_mini: "%jquery_mobile_theme_mini%"
       jquery_mobile_content_theme: "%jquery_mobile_content_theme%"
+      jquery_mobile_list_theme: "%jquery_mobile_list_theme%"
+      jquery_mobile_divider_theme: "%jquery_mobile_divider_theme%"
 
 # Assetic Configuration
 assetic:

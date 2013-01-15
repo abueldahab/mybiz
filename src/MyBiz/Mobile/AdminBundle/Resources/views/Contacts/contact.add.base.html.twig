@@ -1,0 +1,19 @@
+{% extends 'AdminBundle::admin.base.html.twig' %}
+
+{% block pageId %}
+    <div data-role="page" id="admin-contacts-add">
+{% endblock %}
+
+{% block nav_bar %}
+{% endblock %}
+
+{% block content %}
+    {% block contact_add_action %}
+    {% endblock %}
+            {% include 'AdminBundle:Contacts:contact.add.common.fields.html.twig' %}
+            {% block specific_contact_fields %}
+            {% endblock %}
+        </form>
+{% endblock %}
+
+

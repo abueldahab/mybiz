@@ -1,4 +1,11 @@
-{% extends 'AdminBundle:Contacts:contacts.add.base.html.twig' %}
+{% extends 'AdminBundle:Contacts:contact.add.base.html.twig' %}
 
 {% block title %}{% trans %}contacts.add.title{% endtrans %}{% endblock %}
 
+{% block header_left %}
+    <a href="{{ path('_prospects_index') }}" class="ui-btn-left" data-icon="delete">{% trans %}contacts.add.cancel.label{% endtrans %}</a>
+{% endblock %}
+
+{% block contact_add_action %}
+    <form action="{{ path('_prospects_add') }}" method="post">
+{% endblock %}

@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>{{ application_name }} - {{ customer_name }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ asset('html/mobile/style.css') }}" />
         {# JQuery mobile standard css #}
         <link rel="stylesheet" href="{{ asset('html/mobile/jquery/mobile/jquery.mobile-1.2.0.min.css') }}" />
@@ -9,28 +10,29 @@
         {#<link rel="stylesheet" href="{{ asset('html/mobile/jquery/mobile/extended/jqm-icon-pack-2.1.2-fa.css') }}" />#}
         <script src="{{ asset('html/mobile/jquery/jquery-1.8.2.min.js') }}"></script>
         <script src="{{ asset('html/mobile/jquery/mobile/jquery.mobile-1.2.0.min.js') }}"></script>
-        <script src="{{ asset('html/mobile/jquery/validate/jquery.validate.js') }}"></script>
+        {#<script src="{{ asset('html/mobile/jquery/validate/jquery.validate.js') }}"></script>#}
     </head>
     <body>
         {% block page %}
-            <div data-role="page" data-theme="{{ jquery_mobile_theme }}">
-
-                <div data-role="header" data-theme="{{ jquery_mobile_theme }}">
+          {% block pageId %}
+            <div data-role="page" id="base">
+          {% endblock %}
+                <div id="header" data-role="header" data-theme="{{ jquery_mobile_theme }}">
                     {% block header %}
                         <h1>{% trans %}portal.title{% endtrans %}</h1>
-                        <a href="#mainMenu" data-rel="popup" class="ui-btn-right" data-icon="grid" data-iconpos="notext" data-mini="true">{% trans %}nav.menu.title{% endtrans %}</a>
+                        <a href="#mainMenu" data-rel="popup" class="ui-btn-right" data-icon="grid" data-iconpos="notext" data-mini="{{ jquery_mobile_theme_mini }}">{% trans %}nav.menu.title{% endtrans %}</a>
                         {% include ':Mobile:mobile.menu.html.twig' %}
                     {% endblock %}
                 </div><!-- /header -->
 
-                <div data-role="content">
+                <div id="content" data-role="content">
                     {% block content %}{% endblock %}
                 </div><!-- /content -->
 
-                <div data-role="footer" data-position="fixed" data-theme="{{ jquery_mobile_theme }}">
+                <div id="footer" data-role="footer" data-position="fixed" data-theme="{{ jquery_mobile_theme }}">
                     {% block footer_left %}
                     {% endblock %}
-                    <h4 style="text-align:center;">&copy; {{ "now"|date("Y") }} {{ application_name }} - {{ customer_name }}</h4>
+                    <h4>&copy; {{ "now"|date("Y") }} {{ application_name }} - {{ customer_name }}</h4>
                     {% block footer_right %}
                     {% endblock %}
                 </div><!-- /footer -->

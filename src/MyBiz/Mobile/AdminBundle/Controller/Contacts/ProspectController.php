@@ -3,6 +3,9 @@
 namespace MyBiz\Mobile\AdminBundle\Controller\Contacts;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use MyBiz\Engine\CommonBundle\Constants\IndividualTitle;
+use MyBiz\Engine\CommonBundle\Constants\PersonType;
+use MyBiz\Engine\CommonBundle\Constants\CompanyLegalForm;
 
 /**
  * User: Noël Wuyts <noel.wuyts@mybiz.be>
@@ -32,7 +35,12 @@ class ProspectController extends AbstractContactController
      */
     public function goToAddContactAction()
     {
-        return $this->render('AdminBundle:Contacts:prospects.add.html.twig');
+        return $this->render('AdminBundle:Contacts:prospects.add.html.twig',
+            array(  'personTypes' => PersonType::getArray(),
+                    'titles' => IndividualTitle::getArray(),
+                    'legalForms' => CompanyLegalForm::getArray(),
+            )
+        );
     }
 
     /**

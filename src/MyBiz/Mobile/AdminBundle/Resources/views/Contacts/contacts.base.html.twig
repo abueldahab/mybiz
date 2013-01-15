@@ -1,5 +1,9 @@
 {% extends 'AdminBundle::admin.base.html.twig' %}
 
+{% block pageId %}
+    <div data-role="page" id="admin-contacts">
+{% endblock %}
+
 {% block header_left %}
     <a href="{{ path('_contacts_index') }}" class="ui-btn-left" data-icon="back" data-iconshadow="true">{% trans %}header.left.nav.contacts{% endtrans %}</a>
 {% endblock %}

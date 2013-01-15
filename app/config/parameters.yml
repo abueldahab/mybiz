@@ -15,4 +15,7 @@ parameters:
     application_name: MyBiz
     customer_name: testklant
     jquery_mobile_theme: b
-    jquery_mobile_content_theme: b
+    jquery_mobile_theme_mini: "true"
+    jquery_mobile_content_theme: c
+    jquery_mobile_list_theme: c
+    jquery_mobile_divider_theme: a

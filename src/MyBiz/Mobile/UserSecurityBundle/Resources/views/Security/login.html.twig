@@ -1,27 +1,31 @@
 {% extends ':Mobile:mobile.base.html.twig' %}
 
+{% block pageId %}
+    <div data-role="page" id="login">
+{% endblock %}
+
 {% block header %}
     <h1>{% trans %}login.title{% endtrans %}</h1>
-    <a href="{{ path('_portal') }}" class="ui-btn-left" data-icon="delete" data-transition="flip">{% trans %}login.cancel{% endtrans %}</a>
+    {#<a href="{{ path('_portal') }}" data-ajax="false" class="ui-btn-left" data-transition="flip">{% trans %}login.cancel{% endtrans %}</a>#}
 {% endblock %}
 
 {% block content %}
-        <form id="loginForm" action="{{ path('_login_check') }}" method="post">
+    <form id="loginForm" action="{{ path('_login_check') }}" method="post" data-content-theme="{{ jquery_mobile_content_theme }}" >
 
-            {% if error %}
-                <div id="error">{{ error.message }}</div>
-            {% endif %}
+        {% if error %}
+            <div id="error">{{ error.message }}</div>
+        {% endif %}
 
-            <div data-role="fieldcontain" class="ui-field-contain">
-                <label for="username">{% trans %}login.username{% endtrans %}</label>
-                <input type="text" name="_username" id="username" maxlength="25"/>
-            </div>
-            <div data-role="fieldcontain" class="ui-field-contain">
-                <label for="password">{% trans %}login.password{% endtrans %}</label>
-                <input type="password" name="_password" id="password" maxlength="40"/>
-            </div>
-            <button type="submit" aria-disabled="false">{% trans %}login.submit{% endtrans %}</button>
-        </form>
+        <div data-role="fieldcontain" class="ui-field-contain">
+            <label for="username">{% trans %}login.username{% endtrans %}</label>
+            <input type="text" name="_username" id="username" value="{{ last_username }}" maxlength="25"/>
+        </div>
+        <div data-role="fieldcontain" class="ui-field-contain">
+            <label for="password">{% trans %}login.password{% endtrans %}</label>
+            <input type="password" name="_password" id="password" maxlength="40"/>
+        </div>
+        <button type="submit" data-disabled="false">{% trans %}login.submit{% endtrans %}</button>
+    </form>
 {% endblock %}
 
 

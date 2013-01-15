@@ -1,15 +1,26 @@
 user.account: Account
 user.logout: Logout
+
+# ADMINISTRATION - navigation
+header.left.nav.home: Start
+header.left.nav.back: Go back
+# ADMINISTRATION - labels
 admin.title: Administration
 admin.setup.label: Setup
 admin.setup.title: Setup
 admin.navbar.contacts: Contacts
-admin.navbar.erp: ERP
-header.left.nav.home: Start
+admin.navbar.catalogs: Catalogs
+admin.navbar.sales: Sales
+
+# CONTACTS - navigation
 header.left.nav.contacts: All contacts
 header.left.nav.prospects: All prospects
 header.right.nav.prospects.add: Add prospect
-contacts.type.thirdparty.title: Third party
+header.right.nav.customer.add: Add customer
+header.right.nav.representative.add: Add representative
+header.right.nav.supplier.add: Add supplier
+header.right.nav.employee.add: Add employee
+# CONTACTS - labels
 contacts.type.prospect.title: Prospects
 contacts.type.customer.title: Customers
 contacts.type.representative.title: Representatives
@@ -18,7 +29,29 @@ contacts.type.staff.title: Employees
 contacts.search.placeholder: Search...
 contacts.add.title: New prospect
 contacts.add.cancel.label: Cancel
+contacts.add.form.person.label: Person
+contacts.add.form.person.type.label: Type of person
 contacts.add.form.title.label: Title
+contacts.add.form.legalform.label: Legal form
 contacts.add.form.name.label: Name
+contacts.add.form.lastname.label: Last name
 contacts.add.form.firstname.label: First name
+contacts.add.form.telephone.label: Telephone
+contacts.add.form.email.label: Email
+contacts.add.form.address.label: Address
+
+# BUSINESS CONSTANTS - labels
+# Personality
+INDIVIDUAL: individual
+COMPANY: company
+# Titles
+MR: Mr.
+MRS: Mrs.
+MISS: Miss
+# Company legal forms
+EENMANSZAAK: Eenmanszaak
+BVBA: BVBA
+NV: NV
+
+
 

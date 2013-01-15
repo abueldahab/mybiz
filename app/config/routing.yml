@@ -3,9 +3,9 @@
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #    prefix:   /_internal
 
-_portal:
+_front:
     pattern:  /
-    defaults: { _controller: PortalBundle:Portal:index }
+    defaults: { _controller: UserSecurityBundle:Security:login }
 
 _login:
     resource: "@UserSecurityBundle/Controller/SecurityController.php"
