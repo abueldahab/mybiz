@@ -19,7 +19,7 @@ class ProspectController extends AbstractContactController
      */
     public function indexAction()
     {
-        return $this->render('AdminBundle:Contacts:prospects.index.html.twig');
+        return $this->render('AdminBundle:Contacts:sub.prospects.index.html.twig');
     }
 
     /**
@@ -27,7 +27,7 @@ class ProspectController extends AbstractContactController
      */
     public function searchAction()
     {
-        return $this->render('AdminBundle:Contacts:prospects.index.html.twig');
+        return $this->render('AdminBundle:Contacts:sub.prospects.index.html.twig');
     }
 
     /**
@@ -35,7 +35,7 @@ class ProspectController extends AbstractContactController
      */
     public function goToAddContactAction()
     {
-        return $this->render('AdminBundle:Contacts:prospects.add.html.twig',
+        return $this->render('AdminBundle:Contacts:add.prospect.html.twig',
             array(  'personTypes' => PersonType::getArray(),
                     'titles' => IndividualTitle::getArray(),
                     'legalForms' => CompanyLegalForm::getArray(),

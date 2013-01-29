@@ -11,6 +11,7 @@ admin.setup.title: Setup
 admin.navbar.contacts: Contacts
 admin.navbar.catalogs: Catalogs
 admin.navbar.sales: Sales
+admin.navbar.purchase: Purchase
 
 # CONTACTS - navigation
 header.left.nav.contacts: All contacts
