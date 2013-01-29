@@ -22,11 +22,11 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
         );
 
-        // MyBiz Engine bundles
+        // Engine bundles
         $bundles[] = new MyBiz\Engine\CommonBundle\CommonBundle();
         $bundles[] = new MyBiz\Engine\ContactBundle\ContactBundle();
 
-        // MyBiz Mobile bundles
+        // Mobile bundles
         $bundles[] = new MyBiz\Mobile\PortalBundle\PortalBundle();
         $bundles[] = new MyBiz\Mobile\UserSecurityBundle\UserSecurityBundle();
         $bundles[] = new MyBiz\Mobile\AdminBundle\AdminBundle();
